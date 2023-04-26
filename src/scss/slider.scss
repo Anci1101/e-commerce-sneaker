@@ -1,0 +1,127 @@
+@import './style.scss';
+
+.sliderContainer {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 375px;
+    height: 300px;
+    position: relative;
+    // opacity: 0;
+
+    @include respond(large){
+
+        justify-content: space-between;
+        min-width: 375px;
+        height: 480px;
+        border-radius: 10px;
+    }
+}
+
+.sliderWrapper {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    // opacity: 0;
+
+    @include respond(large){
+        width: 100%;
+        height: 400px;
+        border-radius: 10px;
+    }
+}
+
+.slider {
+    // max-width: 375px;
+    // height: 300px;
+    // position: relative;
+    // opacity: 0;
+
+    // @include respond(large){
+    //     min-width: 375px;
+    //     height: 400px;
+    //     border-radius: 10px;
+    // }
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity ease-in-out 0.4s;
+}
+
+.slider > img {
+    height: 100%;
+    width: 100%;
+    // z-index: -1;
+    // position: absolute;
+
+    @include respond(large){
+        // min-width: 375px;
+        border-radius: 10px;
+    }
+}
+
+.active-anim {
+    opacity: 1;
+}
+
+.btnPrev, .btnNext{
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: none;
+    // padding: 10px;
+    // z-index: -1;
+
+    @include respond(large){
+        display: none;
+    }
+}
+
+.btnPrev > img, .btnNext > img {
+    width: 30%;
+    // position: ce;
+    // height: 30%;
+    // align-self: center;
+}
+
+.btnNext {
+    right: 0;
+    margin-right: 10px;
+}
+
+.btnPrev {
+    margin-left: 10px;
+}
+
+.productSmallImagesWrapper {
+    display: none;
+
+    @include respond(large){
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 70px;
+    }
+
+}
+
+.smallImage {
+    height: 100%;
+    width: 20%;
+    cursor: pointer;
+}
+
+.smallImage:active {
+    opacity: 0.5;
+}
+
+.smallImage > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}

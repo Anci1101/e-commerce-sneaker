@@ -1,0 +1,131 @@
+@import './style.scss';
+
+.productDescriptionContainer {
+    padding: 20px;
+    font-family: $font-stack;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 375px;
+
+    @include respond(large){
+        width: 400px;
+        align-self: center;
+    }
+}
+
+.brandName {
+    color: $orange;
+    text-transform: uppercase;
+    font-size: 14px;
+    
+}
+
+.productName {
+    font-size: 26px;
+}
+
+.productDescription {
+    color: $dark-grayish-blue;
+}
+
+.priceInfo {
+    display: flex;
+    justify-content: space-between;
+    font-weight: weight('bold');
+    @include respond(large){
+        flex-direction: column;
+    }
+}
+
+.priceInfo > div {
+    display: flex;
+    gap: 10px;
+}
+
+.currentPrice{
+    font-size: 26px;
+}
+
+.discount {
+    color: $orange;
+    background-color: $pale-orange;
+    border-radius: 5px;
+    align-self: center;
+    padding: 5px;
+}
+
+.oldPrice {
+    color: $grayish-blue;
+    text-decoration: line-through;
+}
+
+.productCounterCartWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include respond(large){
+        flex-direction: row;
+        gap: 5%;
+    }
+}
+
+.productCounter {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $light-grayish-blue;
+    font-weight: weight('bold');
+    padding: 10px;
+    max-width: 375px;
+    border-radius: 10px;
+    @include respond(large){
+        width: 35%;
+    }
+}
+
+.btnCounter {
+    cursor: pointer;
+    color: $orange;
+    height: 100%;
+    width: 30px;
+    align-self: center;
+    border: none;
+    background: none;
+}
+
+.btnCounter:active {
+    opacity: 0.5;
+}
+
+.cartBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: $orange;
+    color: $white;
+    font-weight: weight('bold');
+    font-size: $font-size-paragraph;
+    max-width: 375px;
+    cursor: pointer;
+    @include respond(large){
+        width: 60%;
+    }
+
+}
+
+.cartBtn:active {
+    opacity: 0.5;
+}
+
+.cartIcon {
+    fill: #fff;
+}
+
+
+

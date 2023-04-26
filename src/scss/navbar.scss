@@ -1,0 +1,155 @@
+@import './style.scss';
+.navbar {
+    width: 100%;
+    height: 80px;
+    background-color: $white;
+    padding: 15px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    font-family: $font-stack;
+    font-weight: weight('bold');
+    font-size: 20px;
+
+    @include respond(large) {
+        // display: inline;
+        // justify-content: baseline;
+        // position: relative;
+    }
+    
+    
+}
+
+.menuWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @include respond(large){
+        width: 20%;
+    }
+
+}
+
+.cartWrapper {
+    display: flex;
+    align-items: center;
+    width: 60px;
+    justify-content: space-between;
+}
+
+.cartIcon {
+    fill: $orange;
+}
+
+.menuIcon{
+    cursor: pointer;
+    @include respond(large) {
+        display: none;
+    }
+}
+
+.sneakerTitle {
+    text-decoration: none;
+    color: $black;
+    font-size: 24px;
+
+}
+
+.avatarIcon{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.avatarIcon > img {
+    width: 100%;
+    height: 100%;
+}
+
+.quickCart{
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 300px;
+    height: 200px;
+    background-color: $white;
+    box-shadow: 0px 22px 60px -15px rgba(0,0,0,0.6);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.quickCart > h4 {
+    border-bottom: 1px solid $dark-grayish-blue;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.quickEmptyCartMessage {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: weight(bold);
+    color: $dark-grayish-blue;
+}
+
+.quickCartProdcutInfoWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.quickCartProductInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quickCartProductInfo >img {
+    background-color: $pale-orange;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.quickProductNamePrice{
+    font-size: 14px;
+    color: $dark-grayish-blue;
+}
+
+.quickProductNamePrice > p >span {
+    font-weight: weight(bold);
+}
+
+.deleteIcon {
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+}
+
+.deleteIcon:active {
+    opacity: 0.5;
+}
+
+.checkountBtn {
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: $orange;
+    color: $white;
+    font-weight: weight('bold');
+    font-size: $font-size-paragraph;
+    width: 100%;
+    cursor: pointer;
+}
+
+.checkountBtn:active {
+    opacity: 0.5;
+}

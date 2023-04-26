@@ -21,6 +21,19 @@ $font-weight:(
 $mobile: 375px;
 $desktop: 1440px;
 
+@mixin respond($breakpoint){
+    @if($breakpoint == large){
+        @media (min-width: 750px) {
+            @content
+        }
+    };
+    @if ($breakpoint == small){
+        @media (max-width: 375px) {
+            @content
+        }
+    }
+}
+
 //colors
 //primary
 $orange: hsl(26, 100%, 55%);

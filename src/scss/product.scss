@@ -1,0 +1,13 @@
+@import './style.scss';
+
+.singleProductContainer {
+    display: flex;
+    flex-direction: column;
+    min-width: 375px;
+
+    @include respond(large) {
+        justify-content: center;
+        flex-direction: row;
+        gap: 5%;
+    }
+}

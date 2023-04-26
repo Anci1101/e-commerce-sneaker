@@ -1,0 +1,56 @@
+@import './style.scss';
+
+.sideBar {
+    background-color: $white;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 850ms;
+    z-index: 1;
+    gap: 30px;
+    font-family: $font-stack;
+    font-weight: weight('bold');
+
+    @include respond(large) {
+        width: 50%;
+        height: 40px;
+        left: 0;
+        z-index: 0;
+        flex-direction: row;
+        transition: none;
+        position: static;
+        align-items: center;
+        color: $dark-grayish-blue;
+        font-weight: weight(regular);
+    }
+}
+.closeIcon {
+    cursor: pointer;
+    @include respond(large){
+        display: none;
+    }
+}
+
+.sideBarItems {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @include respond(large){
+        flex-direction: row;
+    }
+
+}
+
+.sideBar.active {
+    left: 0;
+    transition: 350ms;
+
+    @include respond(large){
+        transition: none;
+    }
+}
